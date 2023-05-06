@@ -6,6 +6,7 @@ When we deploy to cloud the else block will work as we won't be having GITHUB_WO
 That time the db config we use DB_USER, DB_NAME, DB_PASSWORD, DB_HOST and DB_PASSWORD
 which we will set in repository secret to be used in our deployment.
 '''
+import os
 if os.getenv('GITHUB_WORKFLOW'):
     DATABASES = {
         'default': {
